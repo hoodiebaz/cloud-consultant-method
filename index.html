@@ -6,6 +6,7 @@
 <title>The Cloud Consultant Method — Full Online Business Infrastructure in 7 Days</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="profile.png">
 <script defer src="https://umami.hoodiehome.net/script.js" data-website-id="f37793e7-17fc-4ab2-8ed8-bbe85bbcbde3"></script>
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -22,8 +23,9 @@ section { padding:72px 0; }
 section + section { border-top:1px solid var(--border); }
 nav { position:sticky; top:0; z-index:100; background:rgba(8,10,13,0.85); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); padding:16px 28px; }
 .nav-inner { max-width:840px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
-.logo { font-weight:800; font-size:18px; color:var(--white); letter-spacing:-0.5px; }
+.logo { font-weight:800; font-size:18px; color:var(--white); letter-spacing:-0.5px; display:flex; align-items:center; gap:9px; }
 .logo span { color:var(--accent); }
+.logo-icon { width:28px; height:28px; background:linear-gradient(135deg,#3b82f6,#2563eb); border-radius:7px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 .nav-cta { background:linear-gradient(135deg,#3b82f6,#2563eb); color:#fff; font-size:12px; font-weight:600; padding:8px 18px; border-radius:6px; text-decoration:none; letter-spacing:0.3px; transition:opacity 0.2s; }
 .nav-cta:hover { opacity:0.85; }
 .hero { padding:100px 0 80px; position:relative; border-top:none; }
@@ -140,7 +142,14 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 <body>
 <nav>
   <div class="nav-inner">
-    <div class="logo">Cloud<span>Consultant</span></div>
+    <div class="logo">
+      <div class="logo-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="white" opacity="0.95"/>
+        </svg>
+      </div>
+      Cloud<span>Consultant</span>
+    </div>
     <a href="https://buy.stripe.com/4gM5kFfkV2YNdKK6GN7Re03" class="nav-cta" data-umami-event="cta-nav">Claim Your Spot →</a>
   </div>
 </nav>
