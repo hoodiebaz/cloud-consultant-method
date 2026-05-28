@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cloud Consultant Method — Full Online Business Infrastructure in 7 Days</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script defer src="https://umami.hoodiehome.net/script.js" data-website-id="f37793e7-17fc-4ab2-8ed8-bbe85bbcbde3"></script>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --black:#080a0d; --dark:#0e1117; --card:#13171f; --border:#1e2330;
+  --accent:#3b82f6; --accent2:#60a5fa; --gold:#f0c040; --red:#ff4d5a;
+  --text:#dde2ee; --muted:#6b7589; --white:#ffffff;
+}
+html { scroll-behavior: smooth; }
+body { background:var(--black); color:var(--text); font-family:'Inter',sans-serif; font-size:15px; line-height:1.65; overflow-x:hidden; }
+body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events:none; z-index:0; opacity:0.4; }
+.container { max-width:840px; margin:0 auto; padding:0 28px; position:relative; z-index:1; }
+section { padding:72px 0; }
+section + section { border-top:1px solid var(--border); }
+nav { position:sticky; top:0; z-index:100; background:rgba(8,10,13,0.85); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); padding:16px 28px; }
+.nav-inner { max-width:840px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+.logo { font-weight:800; font-size:18px; color:var(--white); letter-spacing:-0.5px; }
+.logo span { color:var(--accent); }
+.nav-cta { background:linear-gradient(135deg,#3b82f6,#2563eb); color:#fff; font-size:12px; font-weight:600; padding:8px 18px; border-radius:6px; text-decoration:none; letter-spacing:0.3px; transition:opacity 0.2s; }
+.nav-cta:hover { opacity:0.85; }
+.hero { padding:100px 0 80px; position:relative; border-top:none; }
+.hero::after { content:''; position:absolute; top:-100px; left:50%; transform:translateX(-50%); width:600px; height:400px; background:radial-gradient(ellipse at center, rgba(59,130,246,0.08) 0%, transparent 70%); pointer-events:none; z-index:0; }
+.badge { display:inline-flex; align-items:center; gap:7px; background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.35); color:var(--accent); font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; padding:6px 14px; border-radius:4px; margin-bottom:28px; position:relative; z-index:1; }
+.badge::before { content:''; width:6px; height:6px; background:var(--accent); border-radius:50%; animation:pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.8)} }
+h1 { font-weight:800; font-size:56px; line-height:1.04; letter-spacing:-2px; color:var(--white); margin-bottom:24px; position:relative; z-index:1; }
+h1 em { font-style:normal; background:linear-gradient(90deg,var(--accent) 0%,var(--accent2) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.hero-sub { font-size:18px; color:var(--muted); max-width:520px; margin-bottom:36px; position:relative; z-index:1; font-weight:300; line-height:1.6; }
+.hero-sub strong { color:var(--text); font-weight:500; }
+.hero-actions { display:flex; align-items:center; gap:20px; position:relative; z-index:1; flex-wrap:wrap; }
+.btn-primary { background:linear-gradient(135deg,#3b82f6,#2563eb); color:#fff; font-size:14px; font-weight:600; padding:14px 28px; border-radius:8px; text-decoration:none; transition:all 0.2s; display:inline-flex; align-items:center; gap:8px; }
+.btn-primary:hover { transform:translateY(-1px); box-shadow:0 8px 24px rgba(59,130,246,0.35); }
+.hero-note { font-size:12.5px; color:var(--muted); }
+.section-label { font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:16px; }
+h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white); margin-bottom:10px; line-height:1.15; }
+.section-intro { font-size:15px; color:var(--muted); margin-bottom:36px; max-width:480px; }
+.ps-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.ps-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:24px 22px; }
+.ps-card.problem { border-color:rgba(255,77,90,0.2); }
+.ps-card.solution { border-color:rgba(59,130,246,0.25); }
+.ps-title { font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; margin-bottom:18px; }
+.ps-title.red { color:var(--red); }
+.ps-title.green { color:var(--accent); }
+.ps-item { display:flex; gap:10px; margin-bottom:12px; font-size:13.5px; line-height:1.45; align-items:flex-start; }
+.ps-item .icon { flex-shrink:0; margin-top:1px; }
+.steps-list { display:flex; flex-direction:column; gap:0; }
+.step-row { display:flex; gap:20px; align-items:flex-start; padding:20px 0; border-bottom:1px solid var(--border); }
+.step-row:last-child { border-bottom:none; }
+.step-num { width:32px; height:32px; border-radius:8px; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#fff; font-weight:800; font-size:13px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.step-body { flex:1; padding-top:4px; }
+.step-title { font-size:14px; font-weight:600; color:var(--white); margin-bottom:4px; }
+.step-desc { font-size:13px; color:var(--muted); line-height:1.5; }
+.included-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px; }
+.included-item { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:16px 18px; display:flex; gap:12px; align-items:flex-start; }
+.included-icon { font-size:18px; flex-shrink:0; margin-top:1px; }
+.included-title { font-size:13px; font-weight:600; color:var(--white); margin-bottom:3px; }
+.included-desc { font-size:12px; color:var(--muted); line-height:1.45; }
+.guarantee-box { background:linear-gradient(135deg,rgba(59,130,246,0.05),rgba(96,165,250,0.04)); border:1px solid rgba(59,130,246,0.25); border-radius:12px; padding:28px 26px; }
+.guarantee-items { display:flex; flex-direction:column; gap:12px; }
+.g-item { display:flex; gap:12px; align-items:flex-start; font-size:14px; line-height:1.5; }
+.g-check { width:20px; height:20px; background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.35); border-radius:5px; display:flex; align-items:center; justify-content:center; font-size:11px; flex-shrink:0; margin-top:2px; color:var(--accent); }
+.for-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.for-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:18px 20px; display:flex; gap:12px; align-items:flex-start; }
+.for-icon { font-size:18px; flex-shrink:0; margin-top:2px; }
+.for-title { font-size:13px; font-weight:600; color:var(--white); margin-bottom:3px; }
+.for-desc { font-size:12px; color:var(--muted); line-height:1.45; }
+.not-for-box { background:rgba(255,77,90,0.04); border:1px solid rgba(255,77,90,0.15); border-radius:10px; padding:20px 22px; margin-top:16px; }
+.not-for-label { font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:12px; }
+.not-for-items { display:flex; flex-direction:column; gap:8px; }
+.not-for-item { display:flex; gap:10px; font-size:13px; color:var(--muted); line-height:1.45; align-items:flex-start; }
+.pricing-card { background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden; }
+.pricing-top-bar { height:4px; background:linear-gradient(90deg,var(--accent),var(--accent2)); }
+.pricing-inner { padding:36px 34px; }
+.pricing-label { font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
+.pricing-name { font-weight:800; font-size:26px; color:var(--white); letter-spacing:-0.8px; margin-bottom:6px; }
+.pricing-tagline { font-size:14px; color:var(--muted); margin-bottom:32px; }
+.price-row { display:flex; align-items:flex-end; gap:12px; margin-bottom:6px; flex-wrap:wrap; }
+.price-amount { font-weight:800; font-size:52px; color:var(--white); letter-spacing:-2px; line-height:1; }
+.price-currency { font-size:18px; font-weight:500; color:var(--muted); margin-bottom:8px; }
+.price-note { font-size:13px; color:var(--muted); margin-bottom:28px; }
+.price-divider { border:none; border-top:1px solid var(--border); margin:24px 0; }
+.price-includes-label { font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:14px; }
+.price-line { display:flex; gap:10px; align-items:flex-start; font-size:13.5px; margin-bottom:11px; line-height:1.4; }
+.price-line .dot { width:5px; height:5px; background:var(--accent); border-radius:50%; flex-shrink:0; margin-top:6px; }
+.price-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; }
+.tag { font-size:11px; font-weight:600; padding:5px 12px; border-radius:4px; }
+.tag.blue { background:rgba(59,130,246,0.1); color:var(--accent); border:1px solid rgba(59,130,246,0.25); }
+.tag.red { background:rgba(255,77,90,0.1); color:var(--red); border:1px solid rgba(255,77,90,0.25); }
+.cta-section { background:linear-gradient(135deg,rgba(59,130,246,0.06),rgba(96,165,250,0.04)); border-top:1px solid rgba(59,130,246,0.15) !important; }
+.cta-inner { text-align:center; max-width:520px; margin:0 auto; }
+.cta-inner h2 { font-size:36px; margin-bottom:12px; }
+.cta-inner p { font-size:15px; color:var(--muted); margin-bottom:32px; }
+.cta-big { display:block; background:linear-gradient(135deg,var(--accent),#2563eb); color:#fff; font-weight:800; font-size:17px; padding:18px 42px; border-radius:10px; text-decoration:none; letter-spacing:-0.3px; transition:all 0.2s; margin-bottom:14px; }
+.cta-big:hover { transform:translateY(-2px); box-shadow:0 16px 40px rgba(59,130,246,0.25); }
+.cta-fine { font-size:12px; color:var(--muted); }
+.about-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:32px 30px; display:flex; gap:28px; align-items:flex-start; }
+.about-avatar { width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent2)); display:flex; align-items:center; justify-content:center; font-size:28px; flex-shrink:0; border:2px solid rgba(59,130,246,0.3); overflow:hidden; }
+.about-avatar img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
+.about-body { flex:1; }
+.about-name { font-size:18px; font-weight:800; color:var(--white); letter-spacing:-0.4px; margin-bottom:2px; }
+.about-role { font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:14px; }
+.about-text { font-size:13.5px; color:var(--muted); line-height:1.65; margin-bottom:16px; }
+.about-text strong { color:var(--text); font-weight:500; }
+.about-stats { display:flex; gap:24px; flex-wrap:wrap; padding-top:14px; border-top:1px solid var(--border); }
+.about-stat-num { font-size:20px; font-weight:800; color:var(--white); letter-spacing:-0.5px; line-height:1; margin-bottom:2px; }
+.about-stat-label { font-size:11px; color:var(--muted); }
+.testimonial-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:28px 26px; border-left:3px solid var(--accent); }
+.testimonial-text { font-size:14px; color:var(--text); line-height:1.65; font-style:italic; margin-bottom:16px; }
+.testimonial-cite { font-size:12px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--accent); }
+.faq-list { display:flex; flex-direction:column; gap:0; }
+.faq-item { border-bottom:1px solid var(--border); }
+.faq-item:first-child { border-top:1px solid var(--border); }
+.faq-question { width:100%; background:none; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; padding:20px 0; text-align:left; font-family:'Inter',sans-serif; font-size:14px; font-weight:600; color:var(--white); line-height:1.4; transition:color 0.2s; }
+.faq-question:hover { color:var(--accent2); }
+.faq-chevron { width:20px; height:20px; border-radius:5px; background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.25); color:var(--accent); font-size:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform 0.25s, background 0.2s; }
+.faq-item.open .faq-chevron { transform:rotate(180deg); background:rgba(59,130,246,0.2); }
+.faq-answer { display:none; font-size:13.5px; color:var(--muted); line-height:1.65; padding-bottom:20px; max-width:680px; }
+.faq-answer strong { color:var(--text); font-weight:500; }
+.faq-item.open .faq-answer { display:block; }
+@media (max-width:600px) {
+  h1 { font-size:36px; letter-spacing:-1.5px; }
+  h2 { font-size:24px; }
+  .ps-grid, .included-grid, .for-grid { grid-template-columns:1fr; }
+  section { padding:52px 0; }
+  .pricing-inner { padding:24px 20px; }
+  .price-amount { font-size:40px; }
+  .about-card { flex-direction:column; gap:18px; }
+  .about-stats { gap:16px; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Cloud<span>Consultant</span></div>
+    <a href="https://buy.stripe.com/4gM5kFfkV2YNdKK6GN7Re03" class="nav-cta" data-umami-event="cta-nav">Claim Your Spot →</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="badge">Online business builds for small consultants</div>
+    <h1>Your consultation.<br><em>Online in 7 days.</em></h1>
+    <p class="hero-sub">Landing page, bookings, payments, email, workspace — all set up and ready to go.</p>
+    <div class="hero-actions">
+      <a href="https://buy.stripe.com/4gM5kFfkV2YNdKK6GN7Re03" class="btn-primary" data-umami-event="cta-hero">Book Your Build →</a>
+      <span class="hero-note">$997 AUD · 7-day delivery · Satisfaction guaranteed</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-label">The Problem</div>
+    <h2>The skill is there.<br>The setup isn't.</h2>
+    <p class="section-intro">Most small consultants are great at what they do. The tech side is just a different beast.</p>
+    <div class="ps-grid">
+      <div class="ps-card problem">
+        <div class="ps-title red">Without It</div>
+        <div class="ps-item"><span class="icon">❌</span><span>Bookings happen through DMs and back-and-forth messages</span></div>
+        <div class="ps-item"><span class="icon">❌</span><span>Chasing payments or asking for bank transfers</span></div>
+        <div class="ps-item"><span class="icon">❌</span><span>No website, or something cobbled together that doesn't reflect your work</span></div>
+        <div class="ps-item"><span class="icon">❌</span><span>Tech stuff keeps getting pushed to "later"</span></div>
+        <div class="ps-item"><span class="icon">❌</span><span>No real separation between you and your business</span></div>
+      </div>
+      <div class="ps-card solution">
+        <div class="ps-title green">With It</div>
+        <div class="ps-item"><span class="icon">✅</span><span>A landing page that actually looks like a real business</span></div>
+        <div class="ps-item"><span class="icon">✅</span><span>Clients book and pay themselves — nothing manual</span></div>
+        <div class="ps-item"><span class="icon">✅</span><span>Payment processing set up and connected</span></div>
+        <div class="ps-item"><span class="icon">✅</span><span>Built in 7 days. You don't touch the tech.</span></div>
+        <div class="ps-item"><span class="icon">✅</span><span>You focus on the actual work. The system handles the admin.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-label">What's Included</div>
+    <h2>Everything to go live.<br>Nothing to figure out.</h2>
+    <p class="section-intro">One fee. One week. Fully operational online business.</p>
+    <div class="included-grid">
+      <div class="included-item">
+        <div class="included-icon">🌐</div>
+        <div>
+          <div class="included-title">Custom Landing Page</div>
+          <div class="included-desc">Professional, branded, built around how your consultation business actually works.</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">📅</div>
+        <div>
+          <div class="included-title">Booking & Scheduling</div>
+          <div class="included-desc">Clients self-schedule based on your availability. No back-and-forth DMs.</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">💳</div>
+        <div>
+          <div class="included-title">Payment Processing</div>
+          <div class="included-desc">Get paid at time of booking. No awkward bank transfer requests.</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">🔗</div>
+        <div>
+          <div class="included-title">Domain & Hosting</div>
+          <div class="included-desc">Your own professional domain. Configured, secured, and live.</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">📧</div>
+        <div>
+          <div class="included-title">G-Suite Workspace</div>
+          <div class="included-desc">Professional email, meeting recordings, shared files — all under your domain.</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">⚡</div>
+        <div>
+          <div class="included-title">Email Automations</div>
+          <div class="included-desc">Confirmations, reminders, follow-ups — all automated.</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">🎥</div>
+        <div>
+          <div class="included-title">Video Guide Library</div>
+          <div class="included-desc">Custom recordings showing you how to manage everything ongoing.</div>
+        </div>
+      </div>
+      <div class="included-item">
+        <div class="included-icon">💬</div>
+        <div>
+          <div class="included-title">Direct Access Throughout</div>
+          <div class="included-desc">I'm alongside you the entire build. No ticket system. Real support.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-label">The Process</div>
+    <h2>Simple from your end.<br>Thorough from mine.</h2>
+    <p class="section-intro">Five steps. You send me the basics. I build everything else.</p>
+    <div class="steps-list">
+      <div class="step-row">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-title">Kickoff Call</div>
+          <div class="step-desc">We jump on a call. I learn your brand, your services, your pricing, how you want to work with clients.</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">You Send Me the Basics</div>
+          <div class="step-desc">Logo, brand direction, availability, service types and prices. That's your entire to-do list.</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">I Build Everything</div>
+          <div class="step-desc">Landing page, scheduling, payments, domain, workspace, automations. You see progress and approve as we go.</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-title">Handover & Walkthrough</div>
+          <div class="step-desc">I walk you through everything live. You get video guides for anything you manage ongoing.</div>
+        </div>
+      </div>
+      <div class="step-row">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <div class="step-title">You're Open for Business</div>
+          <div class="step-desc">Share your link. Take bookings. Get paid.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-label">The Guarantee</div>
+    <h2>A couple of guarantees.</h2>
+    <p class="section-intro">Pretty straightforward.</p>
+    <div class="guarantee-box">
+      <div class="guarantee-items">
+        <div class="g-item">
+          <div class="g-check">✓</div>
+          <span><strong style="color:var(--white)">Satisfaction guaranteed.</strong> Not happy with the final build? Full refund. I'm not keeping money from someone who isn't thrilled.</span>
+        </div>
+        <div class="g-item">
+          <div class="g-check">✓</div>
+          <span><strong style="color:var(--white)">30 days free support after launch.</strong> Anything breaks, anything confuses you — I've got you for a full month. No charge.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div class="section-label">Pricing</div>
+    <h2>One flat fee.</h2>
+    <p class="section-intro">No tiers, no upsells. Everything's included.</p>
+    <div class="pricing-card">
+      <div class="pricing-top-bar"></div>
+      <div class="pricing-inner">
+        <div class="pricing-label">The Cloud Consultant Method</div>
+        <div class="pricing-name">Full Business Build</div>
+        <div class="pricing-tagline">Done-for-you · 7-day delivery · satisfaction guaranteed</div>
+        <div class="price-row">
+          <div class="price-amount">$997</div>
+          <div class="price-currency">AUD</div>
+        </div>
+        <div class="price-note">One-off payment. Your complete online business infrastructure — forever.</div>
+        <hr class="price-divider">
+        <div class="price-includes-label">Everything included</div>
+        <div class="price-line"><span class="dot"></span><span>Custom landing page designed around your consultation offering</span></div>
+        <div class="price-line"><span class="dot"></span><span>Booking & scheduling system — clients self-book</span></div>
+        <div class="price-line"><span class="dot"></span><span>Payment processing — get paid at time of booking</span></div>
+        <div class="price-line"><span class="dot"></span><span>Domain, hosting & professional G-Suite workspace</span></div>
+        <div class="price-line"><span class="dot"></span><span>Email automations — confirmations, reminders, follow-ups</span></div>
+        <div class="price-line"><span class="dot"></span><span>Video guide library for ongoing management</span></div>
+        <div class="price-line"><span class="dot"></span><span>Hands-on kickoff & handover calls</span></div>
+        <div class="price-line"><span class="dot"></span><span>30 days free post-launch support</span></div>
+        <div class="price-line"><span class="dot"></span><span>Direct access throughout the entire build</span></div>
+        <div class="price-tags">
+          <span class="tag blue">⚡ Built by a cloud engineer, for small consultants</span>
+          <span class="tag red">🔴 4 spots per month max</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="get-started">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="section-label" style="text-align:center">Ready?</div>
+      <h2>Let's get you set up properly.</h2>
+      <p>7 days and you've got a real online business — not just a link in your bio.</p>
+      <a href="https://buy.stripe.com/4gM5kFfkV2YNdKK6GN7Re03" class="cta-big" data-umami-event="cta-bottom">Book Your Build →</a>
+      <div class="cta-fine">7-day delivery · Satisfaction guaranteed · 4 spots/month</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-label">Who Is This For</div>
+    <h2>Who this is for.</h2>
+    <p class="section-intro">Basically anyone who runs a small consultation practice and needs the tech side sorted.</p>
+    <div class="for-grid">
+      <div class="for-card">
+        <div class="for-icon">🃏</div>
+        <div>
+          <div class="for-title">Spiritual Consultants</div>
+          <div class="for-desc">You're doing readings but the business side is a mess. Let's clean that up.</div>
+        </div>
+      </div>
+      <div class="for-card">
+        <div class="for-icon">🎯</div>
+        <div>
+          <div class="for-title">Life Coaches & Therapists</div>
+          <div class="for-desc">You've got clients but you're still doing too much manually. The right setup fixes that.</div>
+        </div>
+      </div>
+      <div class="for-card">
+        <div class="for-icon">🛠️</div>
+        <div>
+          <div class="for-title">The DIY Stuff Isn't Working</div>
+          <div class="for-desc">Free Calendly, no payment flow, "DM me to book" — it gets the job done until it doesn't.</div>
+        </div>
+      </div>
+      <div class="for-card">
+        <div class="for-icon">🚫</div>
+        <div>
+          <div class="for-title">Not Techy and That's Fine</div>
+          <div class="for-desc">You don't need to understand any of it. That's the whole point.</div>
+        </div>
+      </div>
+    </div>
+    <div class="not-for-box">
+      <div class="not-for-label">This is NOT for you if…</div>
+      <div class="not-for-items">
+        <div class="not-for-item"><span>❌</span><span>You're not ready to actually charge for your services yet</span></div>
+        <div class="not-for-item"><span>❌</span><span>You're looking for someone to find you clients — this is infrastructure, not marketing</span></div>
+        <div class="not-for-item"><span>❌</span><span>You want to "think about it for a few months" — spots are limited</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2>Common questions,<br>straight answers.</h2>
+    <p class="section-intro">No fluff. If something's missing, just ask.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">I'm really not techy. Will I be able to manage this?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">Yes. The system is designed to be dead simple to run. You get video guides for everything, and I'm there for 30 days after launch if anything comes up.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What do I actually need to provide?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">Logo (or a brand direction), colours, availability, and your service types with pricing. That's it. I handle everything else.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What if I don't have a logo yet?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">We'll work with what you have. A general brand direction or even just colours and a vibe is enough. You don't need a polished logo to launch.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Can I see an example of a completed build?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">Yes. I can walk you through a live example — the landing page, booking flow, payment process, the full client experience from start to finish.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What type of consultants have you built for?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">Astrologers, tarot readers, life coaches, and other service-based consultants. You can see a live example at <a href="https://kandillightastro.com/" style="color:var(--accent2)">kandillightastro.com</a> — that's an astrology practice I built out using the same setup.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What happens after the 30 days of support?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">By then you'll be comfortable managing everything yourself. If you want ongoing managed support, we can talk about it — but most people don't need it.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What if I'm not happy with the final result?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">Full refund. You approve everything as we go, and if the final product doesn't meet your expectations, you get your money back.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Why only 4 spots per month?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">Because I'm hands-on for every build. This isn't a template factory — I'm alongside you for 7 days building from scratch. That takes real time, so I cap it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-label">About</div>
+    <h2>Who's building it.</h2>
+    <p class="section-intro">Cloud engineer by trade. I started doing this for people I knew and it kind of took off.</p>
+    <div class="about-card">
+      <div class="about-avatar">
+        <img src="profile.png" alt="Bailey" onerror="this.style.display='none';this.parentElement.innerHTML='⚡'">
+      </div>
+      <div class="about-body">
+        <div class="about-name">Bailey</div>
+        <div class="about-role">Cloud Engineer · Developer · Builder</div>
+        <div class="about-text">I work in IT and cloud infrastructure. I built the whole online setup for a friend who is an astrologer — she just needed to be able to take bookings and get paid without it being a headache. It worked well, so I started offering it to other small consultants.</div>
+        <div class="about-stats">
+          <div><div class="about-stat-num">7</div><div class="about-stat-label">Day delivery</div></div>
+          <div><div class="about-stat-num">4</div><div class="about-stat-label">Spots per month</div></div>
+          <div><div class="about-stat-num">30</div><div class="about-stat-label">Days free support</div></div>
+          <div><div class="about-stat-num">1</div><div class="about-stat-label">Direct line — no tickets</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleFaq(btn) {
+  var item = btn.closest('.faq-item');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(el) { el.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+
+</body>
+</html>
