@@ -127,14 +127,35 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 .faq-answer strong { color:var(--text); font-weight:500; }
 .faq-item.open .faq-answer { display:block; }
 @media (max-width:600px) {
-  h1 { font-size:36px; letter-spacing:-1.5px; }
-  h2 { font-size:24px; }
+  html, body { overflow-x:hidden; }
+  .container { padding:0 18px; }
+  nav { padding:14px 18px; }
+  .nav-inner { gap:10px; }
+  .logo { font-size:15px; }
+  .nav-cta { font-size:11px; padding:7px 13px; white-space:nowrap; }
+  h1 { font-size:34px; letter-spacing:-1.2px; }
+  h2 { font-size:22px; }
+  .hero { padding:72px 0 56px; }
+  .hero-sub { font-size:16px; }
+  .hero-actions { flex-direction:column; align-items:flex-start; gap:12px; }
+  .btn-primary { width:100%; justify-content:center; }
+  .badge { font-size:10px; padding:5px 11px; }
   .ps-grid, .included-grid, .for-grid { grid-template-columns:1fr; }
-  section { padding:52px 0; }
-  .pricing-inner { padding:24px 20px; }
-  .price-amount { font-size:40px; }
+  section { padding:48px 0; }
+  .pricing-inner { padding:22px 18px; }
+  .price-amount { font-size:38px; }
+  .price-row { gap:8px; }
+  .price-tags { flex-direction:column; }
+  .tag { font-size:11px; }
   .about-card { flex-direction:column; gap:18px; }
-  .about-stats { gap:16px; }
+  .about-stats { gap:14px; flex-wrap:wrap; }
+  .about-stat-num { font-size:18px; }
+  .cta-inner h2 { font-size:26px; }
+  .cta-big { font-size:15px; padding:16px 24px; }
+  .faq-question { font-size:13px; }
+  .step-row { gap:14px; }
+  .guarantee-box { padding:22px 18px; }
+  .not-for-box { padding:16px 18px; }
 }
 </style>
 </head>
