@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Cloud Consultant Method — Full Online Business Infrastructure in 7 Days</title>
+<title>The Cloud Consultant Method — Your Consulting Business, Online in 7 Days</title>
+<meta name="description" content="Landing page, bookings, payments, email — one seamless system, live in 7 days, evolving with your brand. $149 AUD/month.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="profile.png">
@@ -30,11 +31,9 @@ nav { position:sticky; top:0; z-index:100; background:rgba(8,10,13,0.85); backdr
 .hero { padding:100px 0 80px; position:relative; border-top:none; }
 .hero::after { content:''; position:absolute; top:-100px; left:50%; transform:translateX(-50%); width:600px; height:400px; background:radial-gradient(ellipse at center, rgba(59,130,246,0.08) 0%, transparent 70%); pointer-events:none; z-index:0; }
 .badge { display:inline-flex; align-items:center; gap:7px; background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.35); color:var(--accent); font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; padding:6px 14px; border-radius:4px; margin-bottom:28px; position:relative; z-index:1; }
-.badge::before { content:''; width:6px; height:6px; background:var(--accent); border-radius:50%; animation:pulse 2s infinite; }
-@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.8)} }
 h1 { font-weight:800; font-size:56px; line-height:1.04; letter-spacing:-2px; color:var(--white); margin-bottom:24px; position:relative; z-index:1; }
 h1 em { font-style:normal; background:linear-gradient(90deg,var(--accent) 0%,var(--accent2) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-.hero-sub { font-size:18px; color:var(--muted); max-width:520px; margin-bottom:36px; position:relative; z-index:1; font-weight:300; line-height:1.6; }
+.hero-sub { font-size:18px; color:var(--muted); max-width:540px; margin-bottom:36px; position:relative; z-index:1; font-weight:300; line-height:1.6; }
 .hero-sub strong { color:var(--text); font-weight:500; }
 .hero-actions { display:flex; align-items:center; gap:20px; position:relative; z-index:1; flex-wrap:wrap; }
 .btn-primary { background:linear-gradient(135deg,#3b82f6,#2563eb); color:#fff; font-size:14px; font-weight:600; padding:14px 28px; border-radius:8px; text-decoration:none; transition:all 0.2s; display:inline-flex; align-items:center; gap:8px; }
@@ -52,6 +51,10 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 .ps-title.green { color:var(--accent); }
 .ps-item { display:flex; gap:10px; margin-bottom:12px; font-size:13.5px; line-height:1.45; align-items:flex-start; }
 .ps-item .icon { flex-shrink:0; margin-top:1px; }
+.evolve-strip { margin-top:28px; background:linear-gradient(135deg,rgba(240,192,64,0.05),rgba(240,192,64,0.02)); border:1px solid rgba(240,192,64,0.25); border-radius:12px; padding:22px 24px; display:flex; gap:14px; align-items:flex-start; }
+.evolve-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
+.evolve-title { font-size:14px; font-weight:700; color:var(--gold); margin-bottom:4px; }
+.evolve-text { font-size:13.5px; color:var(--text); line-height:1.55; }
 .steps-list { display:flex; flex-direction:column; gap:0; }
 .step-row { display:flex; gap:20px; align-items:flex-start; padding:20px 0; border-bottom:1px solid var(--border); }
 .step-row:last-child { border-bottom:none; }
@@ -86,7 +89,14 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 .price-row { display:flex; align-items:flex-end; gap:12px; margin-bottom:6px; flex-wrap:wrap; }
 .price-amount { font-weight:800; font-size:52px; color:var(--white); letter-spacing:-2px; line-height:1; }
 .price-currency { font-size:18px; font-weight:500; color:var(--muted); margin-bottom:8px; }
-.price-note { font-size:13px; color:var(--muted); margin-bottom:28px; }
+.price-per { font-size:16px; font-weight:500; color:var(--muted); margin-bottom:8px; }
+.price-note { font-size:13px; color:var(--muted); margin-bottom:8px; }
+.price-subnote { font-size:12.5px; color:var(--muted); margin-bottom:28px; line-height:1.55; }
+.price-subnote strong { color:var(--text); font-weight:500; }
+.compare-strip { display:flex; flex-direction:column; gap:8px; margin-bottom:4px; }
+.compare-line { display:flex; justify-content:space-between; gap:12px; font-size:12.5px; padding:8px 12px; border-radius:6px; background:rgba(255,77,90,0.04); border:1px solid rgba(255,77,90,0.12); color:var(--muted); }
+.compare-line.you { background:rgba(59,130,246,0.08); border-color:rgba(59,130,246,0.3); color:var(--text); font-weight:600; }
+.compare-line .c-price { white-space:nowrap; font-weight:600; }
 .price-divider { border:none; border-top:1px solid var(--border); margin:24px 0; }
 .price-includes-label { font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:14px; }
 .price-line { display:flex; gap:10px; align-items:flex-start; font-size:13.5px; margin-bottom:11px; line-height:1.4; }
@@ -95,6 +105,7 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 .tag { font-size:11px; font-weight:600; padding:5px 12px; border-radius:4px; }
 .tag.blue { background:rgba(59,130,246,0.1); color:var(--accent); border:1px solid rgba(59,130,246,0.25); }
 .tag.red { background:rgba(255,77,90,0.1); color:var(--red); border:1px solid rgba(255,77,90,0.25); }
+.tag.gold { background:rgba(240,192,64,0.1); color:var(--gold); border:1px solid rgba(240,192,64,0.25); }
 .cta-section { background:linear-gradient(135deg,rgba(59,130,246,0.06),rgba(96,165,250,0.04)); border-top:1px solid rgba(59,130,246,0.15) !important; }
 .cta-inner { text-align:center; max-width:520px; margin:0 auto; }
 .cta-inner h2 { font-size:36px; margin-bottom:12px; }
@@ -113,9 +124,6 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 .about-stats { display:flex; gap:24px; flex-wrap:wrap; padding-top:14px; border-top:1px solid var(--border); }
 .about-stat-num { font-size:20px; font-weight:800; color:var(--white); letter-spacing:-0.5px; line-height:1; margin-bottom:2px; }
 .about-stat-label { font-size:11px; color:var(--muted); }
-.testimonial-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:28px 26px; border-left:3px solid var(--accent); }
-.testimonial-text { font-size:14px; color:var(--text); line-height:1.65; font-style:italic; margin-bottom:16px; }
-.testimonial-cite { font-size:12px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--accent); }
 .faq-list { display:flex; flex-direction:column; gap:0; }
 .faq-item { border-bottom:1px solid var(--border); }
 .faq-item:first-child { border-top:1px solid var(--border); }
@@ -156,6 +164,7 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
   .step-row { gap:14px; }
   .guarantee-box { padding:22px 18px; }
   .not-for-box { padding:16px 18px; }
+  .evolve-strip { padding:18px; }
 }
 </style>
 </head>
@@ -163,43 +172,50 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 <nav>
   <div class="nav-inner">
     <div class="logo">CloudConsultant<span>Method</span></div>
-    <a href="https://buy.stripe.com/4gM5kFfkV2YNdKK6GN7Re03" class="nav-cta" data-umami-event="cta-nav">Claim Your Spot →</a>
+    <a href="#pricing" class="nav-cta" data-umami-event="cta-nav">Claim Your Spot →</a>
   </div>
 </nav>
 
 <section class="hero">
   <div class="container">
-    <div class="badge">Online business builds for small consultants</div>
+    <div class="badge">For solo online consultants &amp; coaches</div>
     <h1>Your consultation.<br><em>Online in 7 days.</em></h1>
-    <p class="hero-sub">Landing page, bookings, payments, email, workspace — all set up and ready to go.</p>
+    <p class="hero-sub">Landing page, bookings, payments, email, workspace — <strong>one seamless system</strong>, built for you in a week. Then it <strong>evolves as your brand does.</strong></p>
     <div class="hero-actions">
-      <a href="https://buy.stripe.com/4gM5kFfkV2YNdKK6GN7Re03" class="btn-primary" data-umami-event="cta-hero">Get Started Now →</a>
-      <span class="hero-note">$997 AUD · 7-day delivery · Satisfaction guaranteed</span>
+      <a href="#pricing" class="btn-primary" data-umami-event="cta-hero">Get Started Now →</a>
+      <span class="hero-note">$149 AUD/month · 7-day build · Satisfaction guaranteed</span>
     </div>
   </div>
 </section>
 
 <section>
   <div class="container">
-    <div class="section-label">The Problem</div>
+    <div class="section-label">Before → After</div>
     <h2>The skill is there.<br>The setup isn't.</h2>
-    <p class="section-intro">Most small consultants are great at what they do. The tech side is just a different beast.</p>
+    <p class="section-intro">Most consultants are great at what they do. The tech side is just a different beast — and every clunky booking flow is quietly costing you clients.</p>
     <div class="ps-grid">
       <div class="ps-card problem">
         <div class="ps-title red">Without It</div>
         <div class="ps-item"><span class="icon">❌</span><span>Bookings happen through DMs and back-and-forth messages</span></div>
-        <div class="ps-item"><span class="icon">❌</span><span>Chasing payments or asking for bank transfers</span></div>
+        <div class="ps-item"><span class="icon">❌</span><span>Chasing payments or asking for awkward bank transfers</span></div>
         <div class="ps-item"><span class="icon">❌</span><span>No website, or something cobbled together that doesn't reflect your work</span></div>
         <div class="ps-item"><span class="icon">❌</span><span>Tech stuff keeps getting pushed to "later"</span></div>
-        <div class="ps-item"><span class="icon">❌</span><span>No real separation between you and your business</span></div>
+        <div class="ps-item"><span class="icon">❌</span><span>Your patchwork setup isn't costing you nothing — it's costing you bookings</span></div>
       </div>
       <div class="ps-card solution">
         <div class="ps-title green">With It</div>
         <div class="ps-item"><span class="icon">✅</span><span>A landing page that actually looks like a real business</span></div>
         <div class="ps-item"><span class="icon">✅</span><span>Clients book and pay themselves — nothing manual</span></div>
-        <div class="ps-item"><span class="icon">✅</span><span>Payment processing set up and connected</span></div>
+        <div class="ps-item"><span class="icon">✅</span><span>Everything connected: bookings, payments, email, calendar</span></div>
         <div class="ps-item"><span class="icon">✅</span><span>Built in 7 days. You don't touch the tech.</span></div>
         <div class="ps-item"><span class="icon">✅</span><span>You focus on the actual work. The system handles the admin.</span></div>
+      </div>
+    </div>
+    <div class="evolve-strip">
+      <div class="evolve-icon">🔄</div>
+      <div>
+        <div class="evolve-title">Your site evolves as your brand does</div>
+        <div class="evolve-text">Don't wait until everything's "figured out" to launch. We build with what you have now, and as your brand, services and pricing evolve — your site evolves with it. Updates are part of the plan, not an extra invoice.</div>
       </div>
     </div>
   </div>
@@ -209,7 +225,7 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
   <div class="container">
     <div class="section-label">What's Included</div>
     <h2>Everything to go live.<br>Nothing to figure out.</h2>
-    <p class="section-intro">One fee. One week. Fully operational online business.</p>
+    <p class="section-intro">One monthly plan. Built in a week. Managed and evolving from there.</p>
     <div class="included-grid">
       <div class="included-item">
         <div class="included-icon">🌐</div>
@@ -242,7 +258,7 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
       <div class="included-item">
         <div class="included-icon">📧</div>
         <div>
-          <div class="included-title">G-Suite Workspace</div>
+          <div class="included-title">Google Workspace</div>
           <div class="included-desc">Professional email, meeting recordings, shared files — all under your domain.</div>
         </div>
       </div>
@@ -254,17 +270,17 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
         </div>
       </div>
       <div class="included-item">
-        <div class="included-icon">🎥</div>
+        <div class="included-icon">🔄</div>
         <div>
-          <div class="included-title">Video Guide Library</div>
-          <div class="included-desc">Custom recordings showing you how to manage everything ongoing.</div>
+          <div class="included-title">Ongoing Updates</div>
+          <div class="included-desc">New services, new prices, brand refresh — your site keeps up as you evolve.</div>
         </div>
       </div>
       <div class="included-item">
         <div class="included-icon">💬</div>
         <div>
-          <div class="included-title">Direct Access Throughout</div>
-          <div class="included-desc">I'm alongside you the entire build. No ticket system. Real support.</div>
+          <div class="included-title">Direct Access, Always</div>
+          <div class="included-desc">I'm your tech department. No ticket system. Message me, it gets handled.</div>
         </div>
       </div>
     </div>
@@ -274,34 +290,29 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 <section id="pricing">
   <div class="container">
     <div class="section-label">Pricing</div>
-    <h2>One flat fee.</h2>
-    <p class="section-intro">No tiers, no upsells. Everything's included.</p>
+    <h2>One simple monthly plan.</h2>
+    <p class="section-intro">No big upfront build fee. No tiers, no upsells. Everything's included.</p>
     <div class="pricing-card">
       <div class="pricing-top-bar"></div>
       <div class="pricing-inner">
         <div class="pricing-label">The Cloud Consultant Method</div>
-        <div class="pricing-name">Full Business Build</div>
-        <div class="pricing-tagline">Done-for-you · 7-day delivery · satisfaction guaranteed</div>
+        <div class="pricing-name">Build + Host + Evolve</div>
+        <div class="pricing-tagline">Done-for-you · Live in 7 days · Managed ongoing</div>
         <div class="price-row">
-          <div class="price-amount">$997</div>
+          <div class="price-amount">$149</div>
           <div class="price-currency">AUD</div>
+          <div class="price-per">/ month</div>
         </div>
-        <div class="price-note">One-off payment. Your complete online business infrastructure — forever.</div>
+        <div class="price-note">6-month minimum, then month-to-month. Cancel anytime after.</div>
+        <div class="price-subnote">Your subscriptions (Google Workspace, domain — roughly $30–50/mo) run on <strong>your own accounts at cost, no markup.</strong> You own everything. My fee covers the part that matters: building it, running it, and evolving it with you.</div>
         <hr class="price-divider">
         <div class="price-includes-label">Everything included</div>
-        <div class="price-line"><span class="dot"></span><span>Custom landing page designed around your consultation offering</span></div>
-        <div class="price-line"><span class="dot"></span><span>Booking & scheduling system — clients self-book</span></div>
-        <div class="price-line"><span class="dot"></span><span>Payment processing — get paid at time of booking</span></div>
-        <div class="price-line"><span class="dot"></span><span>Domain, hosting & professional G-Suite workspace</span></div>
-        <div class="price-line"><span class="dot"></span><span>Email automations — confirmations, reminders, follow-ups</span></div>
-        <div class="price-line"><span class="dot"></span><span>Video guide library for ongoing management</span></div>
+        <div class="price-line"><span class="dot"></span><span>Full build in 7 days — landing page, bookings, payments, email, automations</span></div>
+        <div class="price-line"><span class="dot"></span><span>Ongoing updates — your site evolves as your brand does</span></div>
+        <div class="price-line"><span class="dot"></span><span>Hosting, monitoring and upkeep — handled</span></div>
+        <div class="price-line"><span class="dot"></span><span>Direct access to me throughout — no ticket system</span></div>
+        <div class="price-line"><span class="dot"></span><span>Video guide library for anything you manage yourself</span></div>
         <div class="price-line"><span class="dot"></span><span>Hands-on kickoff & handover calls</span></div>
-        <div class="price-line"><span class="dot"></span><span>30 days free post-launch support</span></div>
-        <div class="price-line"><span class="dot"></span><span>Direct access throughout the entire build</span></div>
-        <div class="price-tags">
-          <span class="tag blue">⚡ Built by a cloud engineer, for small consultants</span>
-          <span class="tag red">🔴 4 spots per month max</span>
-        </div>
       </div>
     </div>
   </div>
@@ -312,9 +323,9 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
     <div class="cta-inner">
       <div class="section-label" style="text-align:center">Ready?</div>
       <h2>Let's get you set up properly.</h2>
-      <p>7 days and you've got a real online business — not just a link in your bio.</p>
-      <a href="https://buy.stripe.com/4gM5kFfkV2YNdKK6GN7Re03" class="cta-big" data-umami-event="cta-bottom">Get Started Now →</a>
-      <div class="cta-fine">7-day delivery · Satisfaction guaranteed · 4 spots/month</div>
+      <p>7 days and you've got a real online business — not just a link in your bio. And it keeps getting better from there.</p>
+      <a href="#pricing" class="cta-big" data-umami-event="cta-bottom">Get Started Now →</a>
+      <div class="cta-fine">$149 AUD/month · 7-day build · Satisfaction guaranteed · 4 spots/month</div>
     </div>
   </div>
 </section>
@@ -323,20 +334,20 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
   <div class="container">
     <div class="section-label">The Process</div>
     <h2>Simple from your end.<br>Thorough from mine.</h2>
-    <p class="section-intro">Five steps. You send me the basics. I build everything else.</p>
+    <p class="section-intro">Five steps. You bring the basics. I build and run everything else.</p>
     <div class="steps-list">
       <div class="step-row">
         <div class="step-num">1</div>
         <div class="step-body">
           <div class="step-title">Kickoff Call</div>
-          <div class="step-desc">We jump on a call. I learn your brand, your services, your pricing, how you want to work with clients.</div>
+          <div class="step-desc">We jump on a call and do your intake together, live. Your brand, your services, your pricing, how you want to work with clients — done in one conversation.</div>
         </div>
       </div>
       <div class="step-row">
         <div class="step-num">2</div>
         <div class="step-body">
-          <div class="step-title">You Send Me the Basics</div>
-          <div class="step-desc">Logo, brand direction, availability, service types and prices. That's your entire to-do list.</div>
+          <div class="step-title">You Send the Basics</div>
+          <div class="step-desc">Logo (or just a brand direction), colours, availability. That's your entire to-do list.</div>
         </div>
       </div>
       <div class="step-row">
@@ -356,8 +367,8 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
       <div class="step-row">
         <div class="step-num">5</div>
         <div class="step-body">
-          <div class="step-title">You're Open for Business</div>
-          <div class="step-desc">Share your link. Take bookings. Get paid.</div>
+          <div class="step-title">Open for Business — and Evolving</div>
+          <div class="step-desc">Share your link. Take bookings. Get paid. And when your brand shifts, your site shifts with it.</div>
         </div>
       </div>
     </div>
@@ -373,11 +384,15 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
       <div class="guarantee-items">
         <div class="g-item">
           <div class="g-check">✓</div>
-          <span><strong style="color:var(--white)">Satisfaction guaranteed.</strong> Not happy with the final build? Full refund. I'm not keeping money from someone who isn't thrilled.</span>
+          <span><strong style="color:var(--white)">Satisfaction guaranteed on the build.</strong> Not happy with your setup? You get your money back. I'm not keeping money from someone who isn't thrilled.</span>
         </div>
         <div class="g-item">
           <div class="g-check">✓</div>
-          <span><strong style="color:var(--white)">30 days free support after launch.</strong> Anything breaks, anything confuses you — I've got you for a full month. No charge.</span>
+          <span><strong style="color:var(--white)">You own everything.</strong> Your domain, your email, your accounts — all in your name, billed at cost. You're never locked into me. I just make it all run.</span>
+        </div>
+        <div class="g-item">
+          <div class="g-check">✓</div>
+          <span><strong style="color:var(--white)">Live in 7 days.</strong> Once we kick off, your business is taking bookings within a week.</span>
         </div>
       </div>
     </div>
@@ -388,20 +403,20 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
   <div class="container">
     <div class="section-label">Who Is This For</div>
     <h2>Who this is for.</h2>
-    <p class="section-intro">Basically anyone who runs a small consultation practice and needs the tech side sorted.</p>
+    <p class="section-intro">Solo online consultants and coaches who need the tech side sorted — properly, and for good.</p>
     <div class="for-grid">
-      <div class="for-card">
-        <div class="for-icon">🃏</div>
-        <div>
-          <div class="for-title">Spiritual Consultants</div>
-          <div class="for-desc">You're doing readings but the business side is a mess. Let's clean that up.</div>
-        </div>
-      </div>
       <div class="for-card">
         <div class="for-icon">🎯</div>
         <div>
-          <div class="for-title">Life Coaches & Therapists</div>
+          <div class="for-title">Consultants & Coaches</div>
           <div class="for-desc">You've got clients but you're still doing too much manually. The right setup fixes that.</div>
+        </div>
+      </div>
+      <div class="for-card">
+        <div class="for-icon">🌱</div>
+        <div>
+          <div class="for-title">Still Figuring Out Your Brand</div>
+          <div class="for-desc">Perfect. We build with what you have now — your site evolves as your direction sharpens.</div>
         </div>
       </div>
       <div class="for-card">
@@ -437,36 +452,36 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
     <p class="section-intro">No fluff. If something's missing, just ask.</p>
     <div class="faq-list">
       <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How does the pricing actually work?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">My fee is <strong>$149 AUD/month</strong> — that covers the full build, hosting management, ongoing updates, and direct access to me. Your underlying subscriptions (Google Workspace, domain — roughly $30–50/month) are set up on <strong>your own accounts, billed at cost with no markup.</strong> You own everything.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Why a 6-month minimum?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">Because the heavy lifting happens in week one — I build your entire business infrastructure upfront with no big setup fee. The 6-month minimum makes that possible. After that, it rolls month-to-month and you can cancel anytime.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What if my brand isn't fully figured out yet?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">That's exactly why this is monthly. We launch with what you have now — a direction, some colours, a vibe is plenty — and your site <strong>evolves as your brand does.</strong> Rebrand, new services, new pricing: updates are part of the plan, not a new invoice. Don't wait for perfect.</div>
+      </div>
+      <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">I'm really not techy. Will I be able to manage this?<span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">Yes. The system is designed to be dead simple to run. You get video guides for everything, and I'm there for 30 days after launch if anything comes up.</div>
+        <div class="faq-answer">Yes — and honestly, you barely have to. The system runs itself, you get video guides for the few things you touch, and I'm on direct access for everything else. That's what the monthly covers.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">What do I actually need to provide?<span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">Logo (or a brand direction), colours, availability, and your service types with pricing. That's it. I handle everything else.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">What if I don't have a logo yet?<span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">We'll work with what you have. A general brand direction or even just colours and a vibe is enough. You don't need a polished logo to launch.</div>
+        <button class="faq-question" onclick="toggleFaq(this)">I already have Calendly / a GoDaddy domain / a half-built site. Is that wasted?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">Not at all. We integrate or migrate what you already have. Your domain, your existing accounts, any content you've made — nothing gets thrown away. It all folds into the one system.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">Can I see an example of a completed build?<span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">Yes. I can walk you through a live example — the landing page, booking flow, payment process, the full client experience from start to finish.</div>
+        <div class="faq-answer">Yes. Check out <a href="https://kandillightastro.com/" style="color:var(--accent2)">kandillightastro.com</a> — an astrology practice built on this exact system. I can also walk you through the full client experience live: landing page, booking flow, payment, the automated emails firing.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">What type of consultants have you built for?<span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">Astrologers, tarot readers, life coaches, and other service-based consultants. You can see a live example at <a href="https://kandillightastro.com/" style="color:var(--accent2)">kandillightastro.com</a> — that's an astrology practice I built out using the same setup.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">What happens after the 30 days of support?<span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">By then you'll be comfortable managing everything yourself. If you want ongoing managed support, we can talk about it — but most people don't need it.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">What if I'm not happy with the final result?<span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">Full refund. You approve everything as we go, and if the final product doesn't meet your expectations, you get your money back.</div>
+        <button class="faq-question" onclick="toggleFaq(this)">What happens if I cancel after the minimum term?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">Clean and simple: everything is already in your name — your domain, your email, your accounts. You keep it all. I hand over the reins with documentation and we part as friends. No hostage situations here.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">Why only 4 spots per month?<span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">Because I'm hands-on for every build. This isn't a template factory — I'm alongside you for 7 days building from scratch. That takes real time, so I cap it.</div>
+        <div class="faq-answer">Because I'm hands-on for every build. This isn't a template factory — I'm alongside you for the full 7 days building from scratch, then managing it ongoing. That takes real time, so I cap it.</div>
       </div>
     </div>
   </div>
@@ -484,11 +499,11 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
       <div class="about-body">
         <div class="about-name">Bailey</div>
         <div class="about-role">Cloud Engineer · Developer · Builder</div>
-        <div class="about-text">I work in IT and cloud infrastructure. I built the whole online setup for a friend who is an astrologer — she just needed to be able to take bookings and get paid without it being a headache. It worked well, so I started offering it to other small consultants.</div>
+        <div class="about-text">I build and automate enterprise cloud infrastructure for a living. I built the whole online setup for a friend who's a consultant — she just needed to take bookings and get paid without it being a headache. It worked so well her referrals started messaging me. <strong>Your business gets the same engineering.</strong></div>
         <div class="about-stats">
-          <div><div class="about-stat-num">7</div><div class="about-stat-label">Day delivery</div></div>
+          <div><div class="about-stat-num">7</div><div class="about-stat-label">Day build</div></div>
           <div><div class="about-stat-num">4</div><div class="about-stat-label">Spots per month</div></div>
-          <div><div class="about-stat-num">30</div><div class="about-stat-label">Days free support</div></div>
+          <div><div class="about-stat-num">100%</div><div class="about-stat-label">You own your accounts</div></div>
           <div><div class="about-stat-num">1</div><div class="about-stat-label">Direct line — no tickets</div></div>
         </div>
       </div>
