@@ -19,7 +19,7 @@
 html { scroll-behavior: smooth; }
 body { background:var(--black); color:var(--text); font-family:'Inter',sans-serif; font-size:15px; line-height:1.65; overflow-x:hidden; }
 body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events:none; z-index:0; opacity:0.4; }
-.container { max-width:840px; margin:0 auto; padding:0 28px; position:relative; z-index:1; }
+.container { max-width:840px; margin:0 auto; padding:0 28px; position:relative; z-index:1; text-align:center; }
 section { padding:72px 0; }
 section + section { border-top:1px solid var(--border); }
 nav { position:sticky; top:0; z-index:100; background:rgba(8,10,13,0.85); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); padding:16px 28px; }
@@ -33,65 +33,52 @@ nav { position:sticky; top:0; z-index:100; background:rgba(8,10,13,0.85); backdr
 .badge { display:inline-flex; align-items:center; gap:7px; background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.35); color:var(--accent); font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; padding:6px 14px; border-radius:4px; margin-bottom:28px; position:relative; z-index:1; }
 h1 { font-weight:800; font-size:56px; line-height:1.04; letter-spacing:-2px; color:var(--white); margin-bottom:24px; position:relative; z-index:1; }
 h1 em { font-style:normal; background:linear-gradient(90deg,var(--accent) 0%,var(--accent2) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-.hero-sub { font-size:18px; color:var(--muted); max-width:540px; margin-bottom:36px; position:relative; z-index:1; font-weight:300; line-height:1.6; }
+.hero-sub { font-size:18px; color:var(--muted); max-width:540px; margin:0 auto 36px; position:relative; z-index:1; font-weight:300; line-height:1.6; }
 .hero-sub strong { color:var(--text); font-weight:500; }
-.hero-actions { display:flex; align-items:center; gap:20px; position:relative; z-index:1; flex-wrap:wrap; }
+.hero-actions { display:flex; align-items:center; justify-content:center; gap:20px; position:relative; z-index:1; flex-wrap:wrap; }
 .btn-primary { background:linear-gradient(135deg,#3b82f6,#2563eb); color:#fff; font-size:14px; font-weight:600; padding:14px 28px; border-radius:8px; text-decoration:none; transition:all 0.2s; display:inline-flex; align-items:center; gap:8px; }
 .btn-primary:hover { transform:translateY(-1px); box-shadow:0 8px 24px rgba(59,130,246,0.35); }
 .hero-note { font-size:12.5px; color:var(--muted); }
 .section-label { font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:16px; }
 h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white); margin-bottom:10px; line-height:1.15; }
-.section-intro { font-size:15px; color:var(--muted); margin-bottom:36px; max-width:480px; }
-.ps-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-.ps-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:24px 22px; }
-.ps-card.problem { border-color:rgba(255,77,90,0.2); }
-.ps-card.solution { border-color:rgba(59,130,246,0.25); }
-.ps-title { font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; margin-bottom:18px; }
-.ps-title.red { color:var(--red); }
-.ps-title.green { color:var(--accent); }
-.ps-item { display:flex; gap:10px; margin-bottom:12px; font-size:13.5px; line-height:1.45; align-items:flex-start; }
-.ps-item .icon { flex-shrink:0; margin-top:1px; }
-.evolve-strip { margin-top:28px; background:linear-gradient(135deg,rgba(240,192,64,0.05),rgba(240,192,64,0.02)); border:1px solid rgba(240,192,64,0.25); border-radius:12px; padding:22px 24px; display:flex; gap:14px; align-items:flex-start; }
-.evolve-icon { font-size:20px; flex-shrink:0; margin-top:1px; }
-.evolve-title { font-size:14px; font-weight:700; color:var(--gold); margin-bottom:4px; }
-.evolve-text { font-size:13.5px; color:var(--text); line-height:1.55; }
+.section-intro { font-size:15px; color:var(--muted); margin:0 auto 36px; max-width:480px; }
 .steps-list { display:flex; flex-direction:column; gap:0; }
-.step-row { display:flex; gap:20px; align-items:flex-start; padding:20px 0; border-bottom:1px solid var(--border); }
+.step-row { display:flex; flex-direction:column; align-items:center; text-align:left; gap:10px; padding:24px 0; border-bottom:1px solid var(--border); max-width:480px; margin:0 auto; }
 .step-row:last-child { border-bottom:none; }
 .step-num { width:32px; height:32px; border-radius:8px; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#fff; font-weight:800; font-size:13px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-.step-body { flex:1; padding-top:4px; }
-.step-title { font-size:14px; font-weight:600; color:var(--white); margin-bottom:4px; }
+.step-body { flex:1; }
+.step-title { font-size:14px; font-weight:600; color:var(--white); margin-bottom:4px; text-align:center; }
 .step-desc { font-size:13px; color:var(--muted); line-height:1.5; }
 .included-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px; }
-.included-item { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:16px 18px; display:flex; gap:12px; align-items:flex-start; }
-.included-icon { font-size:18px; flex-shrink:0; margin-top:1px; }
+.included-item { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:20px 18px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px; }
+.included-icon { font-size:20px; flex-shrink:0; margin-bottom:4px; }
 .included-title { font-size:13px; font-weight:600; color:var(--white); margin-bottom:3px; }
 .included-desc { font-size:12px; color:var(--muted); line-height:1.45; }
 .guarantee-box { background:linear-gradient(135deg,rgba(59,130,246,0.05),rgba(96,165,250,0.04)); border:1px solid rgba(59,130,246,0.25); border-radius:12px; padding:28px 26px; }
-.guarantee-items { display:flex; flex-direction:column; gap:12px; }
-.g-item { display:flex; gap:12px; align-items:flex-start; font-size:14px; line-height:1.5; }
+.guarantee-items { display:flex; flex-direction:column; align-items:center; gap:12px; }
+.g-item { display:flex; gap:12px; align-items:flex-start; text-align:left; font-size:14px; line-height:1.5; max-width:560px; margin:0 auto; }
 .g-check { width:20px; height:20px; background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.35); border-radius:5px; display:flex; align-items:center; justify-content:center; font-size:11px; flex-shrink:0; margin-top:2px; color:var(--accent); }
 .for-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-.for-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:18px 20px; display:flex; gap:12px; align-items:flex-start; }
-.for-icon { font-size:18px; flex-shrink:0; margin-top:2px; }
+.for-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:20px 20px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:6px; }
+.for-icon { font-size:20px; flex-shrink:0; margin-bottom:4px; }
 .for-title { font-size:13px; font-weight:600; color:var(--white); margin-bottom:3px; }
 .for-desc { font-size:12px; color:var(--muted); line-height:1.45; }
 .not-for-box { background:rgba(255,77,90,0.04); border:1px solid rgba(255,77,90,0.15); border-radius:10px; padding:20px 22px; margin-top:16px; }
 .not-for-label { font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:12px; }
-.not-for-items { display:flex; flex-direction:column; gap:8px; }
-.not-for-item { display:flex; gap:10px; font-size:13px; color:var(--muted); line-height:1.45; align-items:flex-start; }
+.not-for-items { display:flex; flex-direction:column; align-items:center; gap:8px; }
+.not-for-item { display:flex; gap:10px; font-size:13px; color:var(--muted); line-height:1.45; align-items:flex-start; text-align:left; max-width:560px; margin:0 auto; }
 .pricing-card { background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden; }
 .pricing-top-bar { height:4px; background:linear-gradient(90deg,var(--accent),var(--accent2)); }
 .pricing-inner { padding:36px 34px; }
 .pricing-label { font-size:10px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
 .pricing-name { font-weight:800; font-size:26px; color:var(--white); letter-spacing:-0.8px; margin-bottom:6px; }
 .pricing-tagline { font-size:14px; color:var(--muted); margin-bottom:32px; }
-.price-row { display:flex; align-items:flex-end; gap:12px; margin-bottom:6px; flex-wrap:wrap; }
+.price-row { display:flex; align-items:flex-end; justify-content:center; gap:12px; margin-bottom:6px; flex-wrap:wrap; }
 .price-amount { font-weight:800; font-size:52px; color:var(--white); letter-spacing:-2px; line-height:1; }
 .price-currency { font-size:18px; font-weight:500; color:var(--muted); margin-bottom:8px; }
 .price-per { font-size:16px; font-weight:500; color:var(--muted); margin-bottom:8px; }
 .price-note { font-size:13px; color:var(--muted); margin-bottom:8px; }
-.price-subnote { font-size:12.5px; color:var(--muted); margin-bottom:28px; line-height:1.55; }
+.price-subnote { font-size:12.5px; color:var(--muted); margin:0 auto 28px; max-width:480px; line-height:1.55; text-align:left; }
 .price-subnote strong { color:var(--text); font-weight:500; }
 .compare-strip { display:flex; flex-direction:column; gap:8px; margin-bottom:4px; }
 .compare-line { display:flex; justify-content:space-between; gap:12px; font-size:12.5px; padding:8px 12px; border-radius:6px; background:rgba(255,77,90,0.04); border:1px solid rgba(255,77,90,0.12); color:var(--muted); }
@@ -99,9 +86,9 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 .compare-line .c-price { white-space:nowrap; font-weight:600; }
 .price-divider { border:none; border-top:1px solid var(--border); margin:24px 0; }
 .price-includes-label { font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--muted); margin-bottom:14px; }
-.price-line { display:flex; gap:10px; align-items:flex-start; font-size:13.5px; margin-bottom:11px; line-height:1.4; }
+.price-line { display:flex; gap:10px; align-items:flex-start; text-align:left; font-size:13.5px; margin:0 auto 11px; max-width:420px; line-height:1.4; }
 .price-line .dot { width:5px; height:5px; background:var(--accent); border-radius:50%; flex-shrink:0; margin-top:6px; }
-.price-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; }
+.price-tags { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:24px; }
 .tag { font-size:11px; font-weight:600; padding:5px 12px; border-radius:4px; }
 .tag.blue { background:rgba(59,130,246,0.1); color:var(--accent); border:1px solid rgba(59,130,246,0.25); }
 .tag.red { background:rgba(255,77,90,0.1); color:var(--red); border:1px solid rgba(255,77,90,0.25); }
@@ -113,15 +100,15 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 .cta-big { display:block; background:linear-gradient(135deg,var(--accent),#2563eb); color:#fff; font-weight:800; font-size:17px; padding:18px 42px; border-radius:10px; text-decoration:none; letter-spacing:-0.3px; transition:all 0.2s; margin-bottom:14px; }
 .cta-big:hover { transform:translateY(-2px); box-shadow:0 16px 40px rgba(59,130,246,0.25); }
 .cta-fine { font-size:12px; color:var(--muted); }
-.about-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:32px 30px; display:flex; gap:28px; align-items:flex-start; }
+.about-card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:32px 30px; display:flex; flex-direction:column; gap:16px; align-items:center; text-align:center; }
 .about-avatar { width:72px; height:72px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent2)); display:flex; align-items:center; justify-content:center; font-size:28px; flex-shrink:0; border:2px solid rgba(59,130,246,0.3); overflow:hidden; }
 .about-avatar img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
 .about-body { flex:1; }
 .about-name { font-size:18px; font-weight:800; color:var(--white); letter-spacing:-0.4px; margin-bottom:2px; }
 .about-role { font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--accent); margin-bottom:14px; }
-.about-text { font-size:13.5px; color:var(--muted); line-height:1.65; margin-bottom:16px; }
+.about-text { font-size:13.5px; color:var(--muted); line-height:1.65; max-width:480px; margin:0 auto 16px; text-align:left; }
 .about-text strong { color:var(--text); font-weight:500; }
-.about-stats { display:flex; gap:24px; flex-wrap:wrap; padding-top:14px; border-top:1px solid var(--border); }
+.about-stats { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; padding-top:14px; border-top:1px solid var(--border); width:100%; }
 .about-stat-num { font-size:20px; font-weight:800; color:var(--white); letter-spacing:-0.5px; line-height:1; margin-bottom:2px; }
 .about-stat-label { font-size:11px; color:var(--muted); }
 .faq-list { display:flex; flex-direction:column; gap:0; }
@@ -131,7 +118,7 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 .faq-question:hover { color:var(--accent2); }
 .faq-chevron { width:20px; height:20px; border-radius:5px; background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.25); color:var(--accent); font-size:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform 0.25s, background 0.2s; }
 .faq-item.open .faq-chevron { transform:rotate(180deg); background:rgba(59,130,246,0.2); }
-.faq-answer { display:none; font-size:13.5px; color:var(--muted); line-height:1.65; padding-bottom:20px; max-width:680px; }
+.faq-answer { display:none; font-size:13.5px; color:var(--muted); line-height:1.65; padding-bottom:20px; max-width:560px; margin:0 auto; text-align:left; }
 .faq-answer strong { color:var(--text); font-weight:500; }
 .faq-item.open .faq-answer { display:block; }
 @media (max-width:600px) {
@@ -145,10 +132,10 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
   h2 { font-size:22px; }
   .hero { padding:72px 0 56px; }
   .hero-sub { font-size:16px; }
-  .hero-actions { flex-direction:column; align-items:flex-start; gap:12px; }
+  .hero-actions { flex-direction:column; align-items:center; gap:12px; }
   .btn-primary { width:100%; justify-content:center; }
   .badge { font-size:10px; padding:5px 11px; }
-  .ps-grid, .included-grid, .for-grid { grid-template-columns:1fr; }
+  .included-grid, .for-grid { grid-template-columns:1fr; }
   section { padding:48px 0; }
   .pricing-inner { padding:22px 18px; }
   .price-amount { font-size:38px; }
@@ -164,7 +151,6 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
   .step-row { gap:14px; }
   .guarantee-box { padding:22px 18px; }
   .not-for-box { padding:16px 18px; }
-  .evolve-strip { padding:18px; }
 }
 </style>
 </head>
@@ -180,7 +166,7 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
   <div class="container">
     <div class="badge">For solo online consultants &amp; coaches</div>
     <h1>Your consultation.<br><em>Online in 7 days.</em></h1>
-    <p class="hero-sub">Landing page, bookings, payments, email, workspace — <strong>one seamless system</strong>, built for you in a week. Then it <strong>evolves as your brand does.</strong></p>
+    <p class="hero-sub">Landing page, bookings, payments, email, workspace — <strong>all wired together as one system</strong>, built for you in a week. Then it <strong>evolves as your brand does.</strong></p>
     <div class="hero-actions">
       <a href="https://buy.stripe.com/eVqaEZ0q1fLz8qq9SZ7Re05" class="btn-primary" data-umami-event="cta-hero">Get Started Now →</a>
       <span class="hero-note">$150 AUD/month · 7-day build · Satisfaction guaranteed</span>
@@ -190,41 +176,8 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 
 <section>
   <div class="container">
-    <div class="section-label">Before → After</div>
-    <h2>The skill is there.<br>The setup isn't.</h2>
-    <p class="section-intro">Most consultants are great at what they do. The tech side is just a different beast — and every clunky booking flow is quietly costing you clients.</p>
-    <div class="ps-grid">
-      <div class="ps-card problem">
-        <div class="ps-title red">Without It</div>
-        <div class="ps-item"><span class="icon">❌</span><span>Bookings happen through DMs and back-and-forth messages</span></div>
-        <div class="ps-item"><span class="icon">❌</span><span>Chasing payments or asking for awkward bank transfers</span></div>
-        <div class="ps-item"><span class="icon">❌</span><span>No website, or something cobbled together that doesn't reflect your work</span></div>
-        <div class="ps-item"><span class="icon">❌</span><span>Tech stuff keeps getting pushed to "later"</span></div>
-        <div class="ps-item"><span class="icon">❌</span><span>Your patchwork setup isn't costing you nothing — it's costing you bookings</span></div>
-      </div>
-      <div class="ps-card solution">
-        <div class="ps-title green">With It</div>
-        <div class="ps-item"><span class="icon">✅</span><span>A landing page that actually looks like a real business</span></div>
-        <div class="ps-item"><span class="icon">✅</span><span>Clients book and pay themselves — nothing manual</span></div>
-        <div class="ps-item"><span class="icon">✅</span><span>Everything connected: bookings, payments, email, calendar</span></div>
-        <div class="ps-item"><span class="icon">✅</span><span>Built in 7 days. You don't touch the tech.</span></div>
-        <div class="ps-item"><span class="icon">✅</span><span>You focus on the actual work. The system handles the admin.</span></div>
-      </div>
-    </div>
-    <div class="evolve-strip">
-      <div class="evolve-icon">🔄</div>
-      <div>
-        <div class="evolve-title">Your site evolves as your brand does</div>
-        <div class="evolve-text">Don't wait until everything's "figured out" to launch. We build with what you have now, and as your brand, services and pricing evolve — your site evolves with it. Updates are part of the plan, not an extra invoice.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
     <div class="section-label">What's Included</div>
-    <h2>Everything to go live.<br>Nothing to figure out.</h2>
+    <h2>What $150 a month actually gets you.</h2>
     <p class="section-intro">One monthly plan. Built in a week. Managed and evolving from there.</p>
     <div class="included-grid">
       <div class="included-item">
@@ -296,7 +249,7 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
       <div class="pricing-top-bar"></div>
       <div class="pricing-inner">
         <div class="pricing-label">The Cloud Consultant Method</div>
-        <div class="pricing-name">Build + Host + Evolve</div>
+        <div class="pricing-name">The Whole Setup</div>
         <div class="pricing-tagline">Done-for-you · Live in 7 days · Managed ongoing</div>
         <div class="price-row">
           <div class="price-amount">$150</div>
@@ -304,14 +257,14 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
           <div class="price-per">/ month</div>
         </div>
         <div class="price-note">6-month minimum, then month-to-month. Cancel anytime after.</div>
-        <div class="price-subnote">Your subscriptions (Google Workspace, domain — roughly $30–50/mo) run on <strong>your own accounts at cost, no markup.</strong> You own everything. My fee covers the part that matters: building it, running it, and evolving it with you.</div>
+        <div class="price-subnote">Your subscriptions (Google Workspace, domain — roughly $30–50/mo) run on <strong>your own accounts at cost, no markup.</strong> You own everything. My fee is for me: building it, running it, and keeping it evolving with you.</div>
         <hr class="price-divider">
         <div class="price-includes-label">Everything included</div>
         <div class="price-line"><span class="dot"></span><span>Full build in 7 days — landing page, bookings, payments, email, automations</span></div>
         <div class="price-line"><span class="dot"></span><span>Ongoing updates — your site evolves as your brand does</span></div>
         <div class="price-line"><span class="dot"></span><span>Hosting, monitoring and upkeep — handled</span></div>
         <div class="price-line"><span class="dot"></span><span>Direct access to me throughout — no ticket system</span></div>
-        <div class="price-line"><span class="dot"></span><span>Video guide library for anything you manage yourself</span></div>
+        <div class="price-line"><span class="dot"></span><span>Documentation library covering the full setup and how it all works together</span></div>
         <div class="price-line"><span class="dot"></span><span>Hands-on kickoff & handover calls</span></div>
       </div>
     </div>
@@ -333,42 +286,28 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 <section>
   <div class="container">
     <div class="section-label">The Process</div>
-    <h2>Simple from your end.<br>Thorough from mine.</h2>
-    <p class="section-intro">Five steps. You bring the basics. I build and run everything else.</p>
+    <h2>Here's exactly how the week goes.</h2>
+    <p class="section-intro">Three steps. You bring the basics. I build and run everything else.</p>
     <div class="steps-list">
       <div class="step-row">
         <div class="step-num">1</div>
         <div class="step-body">
           <div class="step-title">Kickoff Call</div>
-          <div class="step-desc">We jump on a call and do your intake together, live. Your brand, your services, your pricing, how you want to work with clients — done in one conversation.</div>
+          <div class="step-desc">We jump on a call and do your intake together, live — your brand, services, pricing, how you want to work with clients, plus a logo (or just a direction), colours and availability. That's your entire to-do list.</div>
         </div>
       </div>
       <div class="step-row">
         <div class="step-num">2</div>
-        <div class="step-body">
-          <div class="step-title">You Send the Basics</div>
-          <div class="step-desc">Logo (or just a brand direction), colours, availability. That's your entire to-do list.</div>
-        </div>
-      </div>
-      <div class="step-row">
-        <div class="step-num">3</div>
         <div class="step-body">
           <div class="step-title">I Build Everything</div>
           <div class="step-desc">Landing page, scheduling, payments, domain, workspace, automations. You see progress and approve as we go.</div>
         </div>
       </div>
       <div class="step-row">
-        <div class="step-num">4</div>
+        <div class="step-num">3</div>
         <div class="step-body">
-          <div class="step-title">Handover & Walkthrough</div>
-          <div class="step-desc">I walk you through everything live. You get video guides for anything you manage ongoing.</div>
-        </div>
-      </div>
-      <div class="step-row">
-        <div class="step-num">5</div>
-        <div class="step-body">
-          <div class="step-title">Open for Business — and Evolving</div>
-          <div class="step-desc">Share your link. Take bookings. Get paid. And when your brand shifts, your site shifts with it.</div>
+          <div class="step-title">Handover — Open for Business</div>
+          <div class="step-desc">I walk you through everything live, with documentation covering the setup for anything you manage yourself. Then share your link, take bookings, get paid — and as your brand shifts, your site shifts with it.</div>
         </div>
       </div>
     </div>
@@ -408,38 +347,22 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
       <div class="for-card">
         <div class="for-icon">🎯</div>
         <div>
-          <div class="for-title">Consultants & Coaches</div>
-          <div class="for-desc">You've got clients but you're still doing too much manually. The right setup fixes that.</div>
-        </div>
-      </div>
-      <div class="for-card">
-        <div class="for-icon">🌱</div>
-        <div>
-          <div class="for-title">Still Figuring Out Your Brand</div>
-          <div class="for-desc">Perfect. We build with what you have now — your site evolves as your direction sharpens.</div>
-        </div>
-      </div>
-      <div class="for-card">
-        <div class="for-icon">🛠️</div>
-        <div>
-          <div class="for-title">The DIY Stuff Isn't Working</div>
-          <div class="for-desc">Free Calendly, no payment flow, "DM me to book" — it gets the job done until it doesn't.</div>
+          <div class="for-title">Consultants & Coaches Doing Too Much Manually</div>
+          <div class="for-desc">Free Calendly, no payment flow, "DM me to book" — it gets the job done until it doesn't. The right setup fixes that.</div>
         </div>
       </div>
       <div class="for-card">
         <div class="for-icon">🚫</div>
         <div>
-          <div class="for-title">Not Techy and That's Fine</div>
-          <div class="for-desc">You don't need to understand any of it. That's the whole point.</div>
+          <div class="for-title">Not Techy? That's the Point</div>
+          <div class="for-desc">You don't need to understand any of it, and you don't need your brand fully figured out either — we build with what you have and evolve from there.</div>
         </div>
       </div>
     </div>
     <div class="not-for-box">
       <div class="not-for-label">This is NOT for you if…</div>
       <div class="not-for-items">
-        <div class="not-for-item"><span>❌</span><span>You're not ready to actually charge for your services yet</span></div>
-        <div class="not-for-item"><span>❌</span><span>You're looking for someone to find you clients — this is infrastructure, not marketing</span></div>
-        <div class="not-for-item"><span>❌</span><span>You want to "think about it for a few months" — spots are limited</span></div>
+        <div class="not-for-item"><span>❌</span><span>You're not ready to charge for your services yet, you're looking for someone to find you clients (this is infrastructure, not marketing), or you want to "think about it for a few months" — spots are limited</span></div>
       </div>
     </div>
   </div>
@@ -448,16 +371,12 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
 <section>
   <div class="container">
     <div class="section-label">FAQ</div>
-    <h2>Common questions,<br>straight answers.</h2>
-    <p class="section-intro">No fluff. If something's missing, just ask.</p>
+    <h2>Questions people ask before signing up.</h2>
+    <p class="section-intro">If something's missing, just ask.</p>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">How does the pricing actually work?<span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">My fee is <strong>$150 AUD/month</strong> — that covers the full build, hosting management, ongoing updates, and direct access to me. Your underlying subscriptions (Google Workspace, domain — roughly $30–50/month) are set up on <strong>your own accounts, billed at cost with no markup.</strong> You own everything.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">Why a 6-month minimum?<span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">Because the heavy lifting happens in week one — I build your entire business infrastructure upfront with no big setup fee. The 6-month minimum makes that possible. After that, it rolls month-to-month and you can cancel anytime.</div>
+        <button class="faq-question" onclick="toggleFaq(this)">How does the pricing work, and why a 6-month minimum?<span class="faq-chevron">▾</span></button>
+        <div class="faq-answer">My fee is <strong>$150 AUD/month</strong> — that covers the full build, hosting management, ongoing updates, and direct access to me. Your underlying subscriptions (Google Workspace, domain — roughly $30–50/month) are set up on <strong>your own accounts, billed at cost with no markup.</strong> The 6-month minimum is what makes a no-big-setup-fee build possible — the heavy lifting happens in week one. After that, it rolls month-to-month and you can cancel anytime.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">What if my brand isn't fully figured out yet?<span class="faq-chevron">▾</span></button>
@@ -465,19 +384,11 @@ h2 { font-weight:800; font-size:30px; letter-spacing:-0.8px; color:var(--white);
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">I'm really not techy. Will I be able to manage this?<span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">Yes — and honestly, you barely have to. The system runs itself, you get video guides for the few things you touch, and I'm on direct access for everything else. That's what the monthly covers.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">I already have Calendly / a GoDaddy domain / a half-built site. Is that wasted?<span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">Not at all. We integrate or migrate what you already have. Your domain, your existing accounts, any content you've made — nothing gets thrown away. It all folds into the one system.</div>
+        <div class="faq-answer">Yes — and honestly, you barely have to. The system runs itself, you get documentation for the few things you touch, and I'm on direct access for everything else. That's what the monthly covers.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">Can I see an example of a completed build?<span class="faq-chevron">▾</span></button>
         <div class="faq-answer">Yes. Check out <a href="https://kandillightastro.com/" style="color:var(--accent2)">kandillightastro.com</a> — an astrology practice built on this exact system. I can also walk you through the full client experience live: landing page, booking flow, payment, the automated emails firing.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">What happens if I cancel after the minimum term?<span class="faq-chevron">▾</span></button>
-        <div class="faq-answer">Clean and simple: everything is already in your name — your domain, your email, your accounts. You keep it all. I hand over the reins with documentation and we part as friends. No hostage situations here.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">Why only 4 spots per month?<span class="faq-chevron">▾</span></button>
